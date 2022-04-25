@@ -8,7 +8,7 @@
 	$template = $_POST['template_input'];
 
 	// IF - END Regular Expression
-	preg_match_all('/\{{#if (.*?) \}}[\s]*?(.*)[\s]*?{{#end\}}/i', $template, $regs, PREG_PATTERN_ORDER);
+	preg_match_all('/\{{#if (.*?)\}}[\s]*?(.*)[\s]*?{{#end\}}/i', $template, $regs, PREG_PATTERN_ORDER);
 	if(isset($regs[0]) && count($regs[0])) {
 		for ($i = 0; $i < count($regs[0]); $i++) {
 			$condition = $regs[1][$i];
